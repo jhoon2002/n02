@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Nuxt" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/.nuxt" />
+        <item url="file://$PROJECT_DIR$/.nuxt/types" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/.nuxt" />
+      <root url="file://$PROJECT_DIR$/.nuxt/types" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
