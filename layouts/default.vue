@@ -45,6 +45,7 @@ const open = ref(true)
                         bg-opacity-0
                         pa-2
                         @click="$colorMode.preference = 'light'"
+                        yar
                     >
                         <div
                             i-material-symbols-light-mode
