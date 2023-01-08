@@ -1,13 +1,19 @@
+<script setup>
+const open = ref(true)
+</script>
 <template>
     <div
         min-h-screen
         flex
         flex-col
+        dark:bg-gray-800
     >
         <header
             flex-none
             h-60px
             border-b
+            dark:bg-blue-gray-700
+            dark:border-gray-600
             flex
             items-center
             px-3
@@ -15,10 +21,71 @@
             <div
                 flex
                 justify-between
+                items-center
                 w-full
             >
-                <div>한국예술종합학교</div>
-                <button class="ic:round-dark-mode" />
+                <div class="flex items-center gap-x-1rem">
+                    <div
+                        text-1.2rem
+                        dark:text-white
+                    >
+                        한국예술종합학교
+                    </div>
+                    <button @click="open = !open">
+                        <div
+                            i-material-symbols-menu-rounded
+                            text-1.5rem
+                        />
+                    </button>
+                </div>
+                <div class="flex gap-x-0">
+                    <button @click="$colorMode.preference = $colorMode.preference === 'light' ? 'dark' : 'light'" />
+                    <a-btn
+                        bg-white
+                        bg-opacity-0
+                        pa-2
+                        @click="$colorMode.preference = 'light'"
+                    >
+                        <div
+                            i-material-symbols-light-mode
+                            bg-black
+                            text-1.3rem
+                            :bg="$colorMode.preference === 'light' ? 'opacity-80' : 'opacity-20'"
+                        />
+                    </a-btn>
+                    <a-btn
+                        bg-white
+                        bg-opacity-0
+                        pa-2
+                        @click="$colorMode.preference = 'dark'"
+                    >
+                        <div
+                            i-material-symbols-dark-mode
+                            bg-black
+                            text-1.3rem
+                            :bg="$colorMode.preference === 'dark' ? 'opacity-80' : 'opacity-20'"
+                        />
+                    </a-btn>
+                    <a-btn
+                        bg-white
+                        bg-opacity-0
+                        pa-2
+                        @click="$colorMode.preference = 'sepia'"
+                    >
+                        <div
+                            i-material-symbols-local-cafe-rounded
+                            bg-black
+                            text-1.3rem
+                            :bg="$colorMode.preference === 'sepia' ? 'opacity-80' : 'opacity-20'"
+                        />
+                    </a-btn>
+                    <!--<select v-model="$colorMode.preference">
+                        <option value="system">System</option>
+                        <option value="light">Light</option>
+                        <option value="dark">Dark</option>
+                        <option value="sepia">Sepia</option>
+                    </select>-->
+                </div>
             </div>
         </header>
         <div
@@ -33,12 +100,18 @@
             >
                 <aside
                     flex-none
-                    w-250px
                     border-r
+                    dark:border-gray-600
                     bg-gray-50
+                    dark:bg-gray-800
+                    duration-200
+                    :class="{
+                        'w-250px': open,
+                        'translate-x--250px w-0': !open,
+                    }"
                 >
                     <!---->
-                    <div class="px-3 py-4 overflow-y-auto rounded dark:bg-gray-800">
+                    <div class="px-3 py-4 overflow-y-auto">
                         <ul class="space-y-2">
                             <li>
                                 <a
@@ -266,17 +339,19 @@
                     flex-auto
                     flex
                     flex-col
+                    container
                 >
-                    <content
+                    <article
                         flex-auto
                         p-4
                     >
                         <slot />
-                    </content>
+                    </article>
                     <footer
                         flex-none
                         h-70px
                         border-t
+                        dark:border-gray-600
                         flex
                         items-center
                         px-3

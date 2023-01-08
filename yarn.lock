@@ -456,7 +456,28 @@
   dependencies:
     "@floating-ui/core" "^1.0.5"
 
-"@iconify/types@^2.0.0":
+"@iconify-json/carbon@^1.1.13":
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/@iconify-json/carbon/-/carbon-1.1.13.tgz#fefbc1550aaf490c5e0f7357a9c58cabd7b3c184"
+  integrity sha512-qPR7n3JkCqIrvjxnyUPIejhn0wrZJsLmija59U/zwFm5SMOITCfLx+Jp6VecnL0Sm76zRE5Kv54VzolQljB97A==
+  dependencies:
+    "@iconify/types" "*"
+
+"@iconify-json/la@^1.1.3":
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/@iconify-json/la/-/la-1.1.3.tgz#8b5a041e8c05a4aa20e796f3d05e4ad12582a774"
+  integrity sha512-sS3EYdWv1kNgD9UIrL1S9iYimaG+SjpHZWRHlLUNc83DXYgnDA8XxVoY2tYZ6wpCLRdsa2t7lHdk53jj7W9C1A==
+  dependencies:
+    "@iconify/types" "*"
+
+"@iconify-json/material-symbols@^1.1.26":
+  version "1.1.26"
+  resolved "https://registry.yarnpkg.com/@iconify-json/material-symbols/-/material-symbols-1.1.26.tgz#6904ccb4b398a764b8f49342beac0df86658a5ce"
+  integrity sha512-X46EImXvkchsBAKUxL4aBui/sTt/bv6Kwjzj8a0ClM6K5UGYuJh7MH6SUtA/N9joBnncZoZGLRWUJkjGohiJyw==
+  dependencies:
+    "@iconify/types" "*"
+
+"@iconify/types@*", "@iconify/types@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@iconify/types/-/types-2.0.0.tgz#ab0e9ea681d6c8a1214f30cd741fe3a20cc57f57"
   integrity sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==
@@ -685,6 +706,15 @@
     vite-node "^0.25.2"
     vite-plugin-checker "^0.5.1"
     vue-bundle-renderer "^1.0.0"
+
+"@nuxtjs/color-mode@^3.2.0":
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/color-mode/-/color-mode-3.2.0.tgz#b5b6a3931a6ddd9646c3aad121d357c635792eb7"
+  integrity sha512-isDR01yfadopiHQ/VEVUpyNSPrk5PCjUHS4t1qYRZwuRGefU4s9Iaxf6H9nmr1QFzoMgTm+3T0r/54jLwtpZbA==
+  dependencies:
+    "@nuxt/kit" "^3.0.0"
+    lodash.template "^4.5.0"
+    pathe "^1.0.0"
 
 "@polka/url@^1.0.0-next.20":
   version "1.0.0-next.21"
