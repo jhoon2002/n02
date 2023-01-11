@@ -1,4 +1,6 @@
 <script setup>
+import SmoothScrollbar from 'vue3-smooth-scrollbar'
+import OverscrollPlugin from 'smooth-scrollbar/plugins/overscroll'
 const open = ref(true)
 </script>
 <template>
@@ -106,7 +108,17 @@ const open = ref(true)
                     'translate-x--250px w-0': !open,
                 }"
             >
-                <side-menu />
+                <smooth-scrollbar
+                    :options="{
+                        alwaysShowTracks: false,
+                        plugins: {
+                            overscroll: { effect: 'glow', damping: 0.1, maxOverscroll: 230, glowColor: '#ff000e' },
+                        },
+                    }"
+                    :plugins="[OverscrollPlugin]"
+                >
+                    <side-menu />
+                </smooth-scrollbar>
             </aside>
             <div
                 overflow-y-auto
@@ -114,23 +126,33 @@ const open = ref(true)
                 flex
                 flex-col
             >
-                <article
-                    flex-auto
-                    p-4
+                <smooth-scrollbar
+                    :options="{
+                        alwaysShowTracks: false,
+                        plugins: {
+                            overscroll: { effect: 'glow', damping: 0.1, maxOverscroll: 230, glowColor: '#e7c90a' },
+                        },
+                    }"
+                    :plugins="[OverscrollPlugin]"
                 >
-                    <slot />
-                </article>
-                <footer
-                    flex-none
-                    h-70px
-                    border-t
-                    dark:border-gray-600
-                    flex
-                    items-center
-                    px-3
-                >
-                    Korea National University of Arts
-                </footer>
+                    <article
+                        flex-auto
+                        p-4
+                    >
+                        <slot />
+                    </article>
+                    <footer
+                        flex-none
+                        h-70px
+                        border-t
+                        dark:border-gray-600
+                        flex
+                        items-center
+                        px-3
+                    >
+                        Korea National University of Arts
+                    </footer>
+                </smooth-scrollbar>
             </div>
         </div>
     </div>

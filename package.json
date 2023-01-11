@@ -14,7 +14,8 @@
         "@nuxtjs/color-mode": "^3.2.0",
         "@unocss/nuxt": "^0.48.0",
         "nuxt": "3.0.0",
-        "prettier": "^2.8.1"
+        "prettier": "^2.8.1",
+        "vue3-smooth-scrollbar": "^1.0.2"
     },
     "dependencies": {
         "@anu-vue/nuxt": "^0.12.0",
