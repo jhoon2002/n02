@@ -2,6 +2,38 @@
 import SmoothScrollbar from 'vue3-smooth-scrollbar'
 import OverscrollPlugin from 'smooth-scrollbar/plugins/overscroll'
 const open = ref(true)
+const items = ref([
+    {
+        text: '시험대상자',
+        children: [
+            {
+                text: '대상자 입력',
+                path: '/examinees/new',
+            },
+            {
+                text: '대상자 목록',
+                path: '/examinees/new',
+            },
+        ],
+    },
+    {
+        text: '개발 정보',
+        children: [
+            {
+                text: '개발 환경',
+                path: '/examinees/new',
+            },
+            {
+                text: '스타일 가이드',
+                path: '/examinees/new',
+            },
+        ],
+    },
+    {
+        text: '개발 정보',
+        path: '/dev/guide',
+    },
+])
 </script>
 <template>
     <div
@@ -117,7 +149,7 @@ const open = ref(true)
                     }"
                     :plugins="[OverscrollPlugin]"
                 >
-                    <side-menu />
+                    <side-menu :items="items" />
                 </smooth-scrollbar>
             </aside>
             <div
